@@ -100,4 +100,25 @@ public class Todoist
         // metodo que devuelve true si quedan tareas
         return !tareas.isEmpty();
     }
+
+    /** 
+     * Metodo que imprime todas las tareas existentes, una por linea.
+     * El metodo imprime el numero de posicion de la tarea antes del
+     * nombre de la tarea.
+     */  
+    public void mostrarTareasNumeradas(){
+        // vamos a usar bucles por primera vez  para imprimir las tareas numeradas
+        // bucle for-each
+        // declara una variable local de tipo string que es 
+        //la variable del bucle y se ejecuta tantas veces como elementos tenga mi arraylist
+        //
+        int numeroPosicion = 1;
+        //tareas dento del bucle es el arraylist (String tarea : tareas)
+        for(String tarea : tareas){
+            System.out.println(numeroPosicion + ". "+tarea);
+            numeroPosicion = numeroPosicion + 1;
+
+        }
+
+    }
 }
