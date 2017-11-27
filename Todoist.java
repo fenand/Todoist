@@ -120,10 +120,22 @@ public class Todoist
 
         }
     }
-    
-     /**
+
+    /**
      * Muestra solo las tareas en posiciones impares sin numero delante ni nada,
      * solo la tarea
      */
-   //mostrarTareasEnPosicionImpar
+    //mostrarTareasEnPosicionImpar
+    public void mostrarTareasEnPosicionImpar(){
+
+
+        int numeroPosicion = 0;
+
+        for(String tarea : tareas){
+            numeroPosicion = numeroPosicion + 1;
+            if (numeroPosicion % 2 != 0 ) {System.out.println(tarea);}
+
+        }
+    }
 }
+
