@@ -110,8 +110,8 @@ public class Todoist
         // vamos a usar bucles por primera vez  para imprimir las tareas numeradas
         // bucle for-each
         // declara una variable local de tipo string que es 
-        //la variable del bucle y se ejecuta tantas veces como elementos tenga mi arraylist
-        //
+        // la variable del bucle y se ejecuta tantas veces como elementos tenga mi arraylist
+
         int numeroPosicion = 1;
         //tareas dento del bucle es el arraylist (String tarea : tareas)
         for(String tarea : tareas){
@@ -128,14 +128,118 @@ public class Todoist
     //mostrarTareasEnPosicionImpar
     public void mostrarTareasEnPosicionImpar(){
 
-
         int numeroPosicion = 0;
-
         for(String tarea : tareas){
             numeroPosicion = numeroPosicion + 1;
-            if (numeroPosicion % 2 != 0 ) {System.out.println(tarea);}
-
+            if (numeroPosicion % 2 != 0 ){
+                System.out.println(tarea);
+            }
         }
     }
-}
 
+    /**
+     * muestra por pantalla todas las tareas que contienen el texto indicado como parametro, 
+     * una cada linea y ademas muestra un mensaje al final indicando el numero de conincidencias encontrada.Si no hay ninguna que contenga el texto buscado, ** informa de la situcion,insensible a mayusculas y minusculas
+     */
+    public void mostrasCoincidentes(String textoABuscar){
+
+        boolean textoConCoincidencias = false;
+        int coincidencias = 0;
+        for(String tarea : tareas){
+            // if(tarea.equals(textoABuscar)){
+            // System.out.println(tarea);
+            // }
+
+            // equals tiene que ser el mismo texto para que funcione y contains con que contenga algo del texto vale
+            //encadenas invocacines de metodos es meter un metodo detras de otro
+
+            if( tarea.toLowerCase().contains( textoABuscar.toLowerCase() ) ){
+                System.out.println(tarea);
+                textoConCoincidencias = true;
+                coincidencias = coincidencias +1;
+
+            }
+        }
+        if (textoConCoincidencias == false) {
+            System.out.println("No se ha encontrado ninguna tarea con el texto buscado!");
+        }
+
+        System.out.println("Tienes estas estas coincidencias: "+ coincidencias);
+    }
+
+    /**
+     * muestra por pantalla la primera tarea que contenga el texto indicado como parametro
+     * En caso de que no haya ninguna coincidencia no muestra nada.
+     */
+
+    // public void mostrarPrimeraCoincidente(String textoABuscar)
+    // {
+    // boolean yaSeHaImpresoLaPrimeraTareaCoincidente =  false;  
+    // for (String tarea : tareas){
+    // if(tarea.toLowerCase().contains(textoABuscar.toLowerCase())){
+    // if (!yaSeHaImpresoLaPrimeraTareaCoincidente) {
+    // System.out.println(tarea);
+    // yaSeHaImpresoLaPrimeraTareaCoincidente = true;
+    // }
+    // }
+    // }
+    // }
+
+    public void mostrarPrimeraCoincidente(String textoPrimeroABuscar){
+        int coincidencias = 0;
+        //bucle for each
+        for(String tarea : tareas){
+
+            if( tarea.toLowerCase().contains( textoPrimeroABuscar.toLowerCase() ) ){
+                coincidencias = coincidencias +1;
+                if (coincidencias ==1 ){
+                    System.out.println(tarea);
+                }
+            }
+        }
+
+    }
+
+    /**
+     * muestre por pantalla todas las tareas existentes,una por linea.
+     * usando un bucle while
+     */
+    public void mostrarTareas2()
+    {
+        int posicionTareaActual = 0 ;
+
+        while(posicionTareaActual < tareas.size()){
+            System.out.println(tareas.get(posicionTareaActual)); 
+            posicionTareaActual ++;
+        }
+    }
+
+    /**
+     * muestra las tareas numeradas usando un buvle while empezando en 1
+     */
+    public void mostrarTareasNumeradas2(){
+        int posicionTareaActual = 0 ;
+
+        while(posicionTareaActual < tareas.size()){
+
+            System.out.println((posicionTareaActual + 1) +" "+ tareas.get(posicionTareaActual)); 
+            posicionTareaActual= posicionTareaActual+ 1;
+        }
+    }
+
+    /**
+     * muestra por pantalla las primeras n tareas(siendo n un parametro)
+     * en caso de que no haya suficiente tareas muestra solo las que haya
+     */
+
+    public void mostrasNPrimeras(int n){
+        int posicionTareaActual = 0 ;
+
+        while(posicionTareaActual < n && posicionTareaActual < tareas.size() ){
+
+            System.out.println((posicionTareaActual + 1) +" "+ tareas.get(posicionTareaActual)); 
+            posicionTareaActual= posicionTareaActual+ 1;
+        }
+
+    }
+}
