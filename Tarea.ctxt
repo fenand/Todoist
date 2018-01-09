@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Tarea
+comment0.text=\r\n\ Clase\ que\ modela\ un\ objeto\ tarea\ que\ indica\ el\ contenido\ de\ la\ tarea\r\n\ y\ su\ estado\ (si\ esta\ completada\ o\ no)\r\n\r\n\ @author\ Dasins\r\n\ @version\ 20/12/2017\r\n
+comment1.params=tarea
+comment1.target=Tarea(java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tarea\r\n
+comment2.params=
+comment2.target=java.lang.String\ getTarea()
+comment2.text=\r\n\ @return\ Devuelve\ true\ si\ la\ tarea\ esta\ compeltada.\ Falso\ en\ cualquier\ otro\ caso\r\n
+comment3.params=
+comment3.target=boolean\ getEstado()
+comment3.text=\r\n\ @return\ Devuelve\ el\ contenido\ de\ la\ tarea\r\n
+comment4.params=
+comment4.target=void\ setCompletada()
+comment4.text=\r\n\ Marca\ como\ completada\ una\ tarea\r\n
+comment5.params=numeroPosicion
+comment5.target=java.lang.String\ devolverTarea(int)
+comment5.text=\r\n\ Devuelve\ la\ tarea,\ inserta\ un\ [x]\ si\ esta\ completada\ o\ un\ [\ ]\ si\ no.\r\n
+numComments=6

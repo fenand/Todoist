@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  *Clase que permite almacenar las tareas que tenemos por hacer
  */
-public class Todoist
+public class Todoist2
 {
     // array que almacena tareas
 
@@ -13,7 +13,7 @@ public class Todoist
     /**
      * Constructor for objects of class Todoist
      */
-    public Todoist()
+    public Todoist2()
     {
         // crear un nuevo arraylist llamado tareas sobre la misma variable tareas y no una nueva 
         tareas = new ArrayList<String>();
@@ -241,5 +241,70 @@ public class Todoist
             posicionTareaActual= posicionTareaActual+ 1;
         }
 
+    }
+
+    /**
+     * Devuelve true si hay al menos una tarea que contenga el texto indicado
+     * como parámetro y false en caso contrario. El metodo se implementar usando
+     * un  bucle for-each
+     */
+    public boolean hayTareaCoincidente(String textoABuscar)
+    {
+        boolean aDevolver = false ;
+        for(String tarea : tareas){
+
+            if(tarea.toLowerCase().contains(textoABuscar.toLowerCase() ) ){
+                aDevolver = true; 
+
+            }
+
+        }
+        return aDevolver;
+    }
+
+    /**
+     * Devuelve true si hay al menos una tarea que contenga el texto indicado
+     * como parámetro y false en caso contrario. El metodo se debe ejecutar de la
+     * forma mas rapida posible
+     */
+    public boolean hayTareaCoincidenteEficiente(String textoABuscar)
+    {
+        boolean hayTareasCoincidentes = false;
+        String tarea = "";
+        int contador = 0;
+
+        while(contador <tareas.size() && hayTareasCoincidentes == false){
+            tarea = tareas.get(contador);
+
+            if(tarea.toLowerCase().contains(textoABuscar.toLowerCase() ) ){
+                hayTareasCoincidentes = true; 
+
+            }
+            contador ++;
+        }
+        return hayTareasCoincidentes;
+
+    } 
+
+    /**
+     * Elimina la primera tarea que contiene el texto indicado por parámetro
+     */
+    public void eliminaPrimeraTareaCoincidente(String textoABuscar)
+    {
+        boolean hayTareasCoincidentes = false;
+        String tarea = "";
+        int contador = 0;
+
+        while(contador <tareas.size() && hayTareasCoincidentes == false){
+            tarea = tareas.get(contador);
+
+            if(tarea.toLowerCase().contains(textoABuscar.toLowerCase() ) ){
+                
+                tareas.remove(tarea);
+                hayTareasCoincidentes = true; 
+
+            }
+            contador ++;
+        }
     }
 }

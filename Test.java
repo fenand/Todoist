@@ -9,7 +9,7 @@ public class Test
     public static void main(String[] args) 
     {
      System.out.println("Creamos un objeto todoist...");
-        Todoist todoist = new Todoist();
+        Todoist2 todoist = new Todoist2();
         
         System.out.println("\nMostramos el numero de tareas pendientes...");
         todoist.mostrarNumeroDeTareasPendientes();

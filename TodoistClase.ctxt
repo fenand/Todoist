@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TodoistClase
+comment0.text=\r\n\ Clase\ que\ permite\ almacenar\ las\ tareas\ pendientes\ que\ tenemos\ por\ hacer.\r\n
+comment1.params=
+comment1.target=TodoistClase()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Todoist.\ \r\n\ Crea\ un\ gestor\ con\ las\ 3\ tareas\ vac\u00EDas.\r\n
+comment2.params=nombreTarea
+comment2.target=void\ addTarea(java.lang.String)
+comment2.text=\r\n\ Inserta\ una\ nueva\ tarea\r\n
+comment3.params=
+comment3.target=void\ mostrarTareasNumeradas()
+comment3.text=\ \r\n\ Metodo\ que\ imprime\ todas\ las\ tareas\ existentes,\ una\ por\ linea.\r\n\ El\ metodo\ imprime\ el\ numero\ de\ posicion\ de\ la\ tarea\ antes\ del\r\n\ nombre\ de\ la\ tarea.\r\n
+comment4.params=indiceTarea
+comment4.target=void\ marcarComoCompletada(int)
+comment4.text=\r\n\ Marca\ como\ completada\ la\ tarea\ indicada\ como\ parametro.\ Por\ ejemplo,\r\n\ si\ el\ par\u00E1metro\ es\ 0\ marca\ como\ completada\ la\ primera\ tarea,\ si\ es\ 1\ la\r\n\ segunda,\ etc.\r\n
+numComments=5
